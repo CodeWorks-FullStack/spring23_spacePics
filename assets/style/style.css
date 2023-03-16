@@ -1,0 +1,46 @@
+/* BASIC STYLES HERE */
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+#details {
+    min-height: 85vh;
+}
+
+.apod-text {
+    color: aliceblue;
+    font-weight: bold;
+    text-shadow: 1px 1px black,
+        1px 1px 5px #cda0f1bd,
+        -3px 1px 5px #ff300040;
+    letter-spacing: 0.08rem;
+}
+
+
+/* NOTE if you want to use hover in this way....the second class we are trying to target, must be the next direct sibling of the class with the :hover */
+.apod-title:hover+.apod-desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+.apod-desc {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s linear;
+}
+
+.apod-img {
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 5px #cda0f1bd;
+    cursor: pointer;
+}
+
+#favoritesOffcanvas {
+    background-color: transparent;
+    backdrop-filter: blur(16px);
+}
